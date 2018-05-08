@@ -1,0 +1,9 @@
+{% extends "directory_management_app/base.html" %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <div>
+	 <p>File deleted Successfully</p>	
+	</div>
+{% endif %}
+{% endblock %}

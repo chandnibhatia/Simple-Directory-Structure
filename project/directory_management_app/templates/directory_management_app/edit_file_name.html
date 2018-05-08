@@ -1,0 +1,16 @@
+{% extends "directory_management_app/base.html" %}
+
+{% block content %}
+
+<form method="post" action="{% url 'directory_management_app:rename_file' %}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>Enter new file name :</td><td><input type="text" name="new_filename"></td><td><input type="hidden" name="old_filename" id="old_filename" value="{{ path }}"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"></td><td><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+  </form>
+{% endblock %}
